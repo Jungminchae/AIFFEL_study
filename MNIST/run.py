@@ -46,7 +46,7 @@ if __name__ == '__main__':
     parser.add_argument('--augment_data', type=to_bool, default=False)
     parser.add_argument('--batch_size', type=int, default=32)
     # parser.add_argument('--epochs', type=int, default=10)
-    parser.add_argument('--model_save', type=bool, default=True)
+    parser.add_argument('--model_save', type=to_bool, default=True)
     parser.add_argument('--submission_name', type=str, default='submission.csv')
     args = parser.parse_args()
     dl = Dataloader()
