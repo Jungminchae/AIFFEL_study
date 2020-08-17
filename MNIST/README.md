@@ -28,14 +28,14 @@ a.image_generator_local_save()
 ```python
 !python run.py --augment_data false \
                --batch_size 32 \
-               --model_save true
+               --model_save true \
                --submission_name submission_01.csv
 ```
 ## Augmentation 데이터 사용
 ```python
 !python run.py --augment_data true \
                --batch_size 32 \
-               --model_save true
+               --model_save true \
                --submission_name submission_01.csv
 ```
 
