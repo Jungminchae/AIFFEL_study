@@ -7,7 +7,7 @@ git clone https://github.com/Jungminchae/AIFFEL_study.git
 ```
 - 그 후 clone 하신 디렉토리 안에 들어가서 몇 개의 디렉토리만 더 만들면 됩니다.
 ```shell
-cd AIFFEL_study
+cd AIFFEL_study/MNIST
 mkdir data
 mkdir data/aug
 mkdir submissions
