@@ -77,8 +77,8 @@ if __name__ == '__main__':
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     
     # scheduler, early_stop
-    cosine_annealing = CosineAnnealingScheduler(T_max=100, eta_max=6e-4, eta_min=3e-5)
-    early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=15)
+    cosine_annealing = CosineAnnealingScheduler(T_max=100, eta_max=3e-4, eta_min=1e-5)
+    early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=10)
 
     batch_size = args.batch_size
 
@@ -92,7 +92,7 @@ if __name__ == '__main__':
     # submission
     submission = dl.submission
     submission['digit'] = np.argmax(model.predict(X_test), axis=1)
-    submission.to_csv('./submissions/{}'.format(args.submission_name))
+    submission.to_csv('./submissions/{}'.format(args.submission_name), index=False)
 
     if args.model_save == True:
         if os.path.isdir('./model') == False: os.mkdir('./model')
